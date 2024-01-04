@@ -15,6 +15,10 @@ function addTask(){
   }
   a.value = '';
 }
+  function clearAll() {
+    b.innerHTML = '';
+  }
+
 b.addEventListener("click",function(e){
   if(e.target.tagName==="LI"){
   e.target.classList.toggle("checked")
@@ -23,11 +27,9 @@ b.addEventListener("click",function(e){
       e.target.parentElement.remove();
     }
     
+ 
+    
 },false);
-function clearTask(button) {
+
   
-  const listItem = button.parentElement;
-  const todoList = document.getElementById('todoList');
-  todoList.removeChild(listItem);
-}
 
