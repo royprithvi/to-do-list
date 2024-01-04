@@ -22,4 +22,12 @@ b.addEventListener("click",function(e){
     else if(e.target.tagName==="SPAN"){
       e.target.parentElement.remove();
     }
+    
 },false);
+function clearTask(button) {
+  
+  const listItem = button.parentElement;
+  const todoList = document.getElementById('todoList');
+  todoList.removeChild(listItem);
+}
+
